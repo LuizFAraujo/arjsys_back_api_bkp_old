@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using ArjSys.API.Configurations;
 using ArjSys.Infraestrutura.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,7 +16,9 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 // Adiciona a configuração do Swagger
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerConfiguration();
+
 
 // Configura o Entity Framework e o banco de dados
 builder.Services.AddDbContext<ArjSysDbContext>(options =>
@@ -27,8 +30,9 @@ var app = builder.Build();
 // Configura o middleware para exibir o Swagger
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    // app.UseSwagger();
+    // app.UseSwaggerUI();
+    app.UseSwaggerConfiguration(); // Usa a configuração personalizada do Swagger
 }
 
 // =================================================================
