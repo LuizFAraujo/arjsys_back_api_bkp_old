@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArjSys.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33a1d507db1c776b280615b7f1a0a304e84a8691")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad504f7d50da7b39399e2bb53522edf770b7b634")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArjSys.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArjSys.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

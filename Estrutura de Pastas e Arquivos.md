@@ -14,7 +14,10 @@ ArjSys-BackEnd
 ├── ArjSys.API/
 │	├── # Dependências #
 │	│	├── Pacotes
-│	│	│	└── Microsoft.Extensions.DependencyInjection
+│	│	│	├── AutoMapper
+│	│	│	├── Microsoft.EntityFrameworkCore
+│	│	│	├── Microsoft.Extensions.DependencyInjection
+│	│	│	└── Swashbuckle.AspNetCore
 │	│	└── Projetos
 │	│		├── ArjSys.Aplicacao
 │	│		└── ArjSys.Infraestrutura
@@ -28,7 +31,7 @@ ArjSys-BackEnd
 │	│   └── README - Middleware.md
 │	├── appsettings.json
 │	├── Program.cs
-│	└ README - API.md
+│	└── README - API.md
 │	
 ├── ArjSys.Aplicacao/
 │	├── # Dependências #
