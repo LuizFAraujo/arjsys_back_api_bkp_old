@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArjSys.Infraestrutura")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad504f7d50da7b39399e2bb53522edf770b7b634")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b6a97c06b866254cbbfea3da3f2dbd1cd4a0cd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArjSys.Infraestrutura")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArjSys.Infraestrutura")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

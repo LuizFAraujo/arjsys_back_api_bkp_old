@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArjSys.Aplicacao")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33a1d507db1c776b280615b7f1a0a304e84a8691")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b6a97c06b866254cbbfea3da3f2dbd1cd4a0cd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArjSys.Aplicacao")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArjSys.Aplicacao")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
