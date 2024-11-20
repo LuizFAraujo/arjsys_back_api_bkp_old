@@ -6,6 +6,8 @@ Ele fornece uma visão geral de como o código está organizado em camadas e mó
 ### Função
 - Ajudar na compreensão da estrutura do projeto.
 - Fornecer uma referência rápida sobre onde cada parte do código está localizada.
+- Facilitar a navegação e manutenção do código para desenvolvedores.
+
 
 
 
@@ -14,142 +16,179 @@ ArjSys-BackEnd
 ├── ArjSys.API/
 │	├── # Dependências #
 │	│	├── Pacotes
-│	│	│	├── AutoMapper
+│	│	│	├── Microsoft.AspNetCore.OpenApi
 │	│	│	├── Microsoft.EntityFrameworkCore
-│	│	│	├── Microsoft.Extensions.DependencyInjection
+│	│	│	├── Microsoft.EntityFrameworkCore.Design
+│	│	│	├── Microsoft.EntityFrameworkCore.Sqlite
 │	│	│	└── Swashbuckle.AspNetCore
 │	│	└── Projetos
 │	│		├── ArjSys.Aplicacao
+│	│		├── ArjSys.Dominio
 │	│		└── ArjSys.Infraestrutura
-│	├── Configurations/
-│	│	├── SwaggerConfig.cs
-│	│   └── README - Configurations.md
 │	├── Controllers/
-│	│	├── CategoriaController.cs
-│	│	├── PedidoController.cs
-│	│	├── ProdutoController.cs
-│	│   └── README - Controllers.md
-│	├── DTOs/
-│	│	├── CategoriaDTO.cs
-│	│	├── CreateProdutoDTO.cs
-│	│	├── PedidoDTO.cs
-│	│	├── ProdutoDTO.cs
-│	│   └── README - DTOs.md
-│	├── Extensions/
-│	│	├── MiddlewareExtensions.cs
-│	│	├── ServiceCollectionExtensions.cs
-│	│   └── README - Extensions.md
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Controllers.md
 │	├── Middleware/
-│	│	├── ExceptionHandlingMiddleware.cs
-│	│	├── RequestLoggingMiddleware.cs
-│	│   └── README - Middleware.md
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Middleware.md
 │	├── appsettings.json
 │	├── Program.cs
-│	└── README - API.md
+│	└── _ API.md
 │	
 ├── ArjSys.Aplicacao/
 │	├── # Dependências #
 │	│	├── Pacotes
-│	│	│	└── AutoMapper
+│	│	│	├── AutoMapper
+│	│	│	└── FluentValidation.DependencyInjectionExtensions
 │	│	└── Projetos
 │	│		├── ArjSys.Dominio
 │	│		└── ArjSys.Infraestrutura
+│	├── DTOs/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ DTOs.md
 │	├── Interfaces/
-│	│	├── ICategoriaService.cs
-│	│	├── IPedidoService.cs
-│	│	├── IProdutoService.cs
-│	│   └── README - Interfaces.md
-│	├── Mappers/
-│	│	├── CategoriaMapper.cs
-│	│	├── PedidoMapper.cs
-│	│	├── ProdutoMapper.cs
-│	│   └── README - Mappers.md
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Interfaces.md
 │	├── Services/
-│	│	├── CategoriaService.cs
-│	│	├── PedidoService.cs
-│	│	├── ProdutoService.cs
-│	│   └── README - Services.md
-│	├── Validators/
-│	│	├── CategoriaValidator.cs
-│	│	├── PedidoValidator.cs
-│	│	├── ProdutoValidator.cs
-│	│   └── README - Validators.md
-│	└── README - Aplicacao.md
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Services.md
+│	└── _ Aplicacao.md
 │	
 ├── ArjSys.Dominio/
-│	├── # Dependências #
-│	│	└── Pacotes
-│	│		└── FluentValidation
 │	├── Entities/
-│	│	├── Categoria.cs
-│	│	├── Cliente.cs
-│	│	├── Pedido.cs
-│	│	├── Produto.cs
-│	│   └── README - Entidades.md
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Entities.md
 │	├── Interfaces/
-│	│	├── ICategoriaRepository.cs
-│	│	├── IPedidoRepository.cs
-│	│	├── IProdutoRepository.cs
-│	│   └── README - Interfaces.md
-│	├── Specifications/
-│	│	├── CategoriaSpecification.cs
-│	│	├── PedidoSpecification.cs
-│	│	├── ProdutoSpecification.cs
-│	│   └── README - Specifications.md
-│	├── ValueObjects/
-│	│	├── Endereco.cs
-│	│	├── Telefone.cs
-│	│   └── README - ValueObjects.md
-│	└── README - Dominio.md
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Interfaces.md
+│	├── Services/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Services.md
+│	└── _ Dominio.md
 │	
 ├── ArjSys.Infraestrutura/
 │	├── # Dependências #
 │	│	├── Pacotes
 │	│	│	├── Microsoft.EntityFrameworkCore
-│	│	│	├── Microsoft.EntityFrameworkCore.Sqlite
-│	│	│	└── Microsoft.EntityFrameworkCore.Tools
+│	│	│	├── Microsoft.EntityFrameworkCore.Design
+│	│	│	└── Microsoft.EntityFrameworkCore.Sqlite
 │	│	└── Projetos
-│	│		├── ArjSys.Aplicacao
 │	│		└── ArjSys.Dominio
-│	├── Configurations/
-│	│	├── CategoriaConfiguration.cs
-│	│	├── PedidoConfiguration.cs
-│	│	├── ProdutoConfiguration.cs
-│	│   └── README - Configurations.md
-│	├── Data/
-│	│   ├── ArjSysDbContext.cs
-│	│   └── README - Data.md
-│	├── Migrations/
-│	│	├── AddCategoriaTable.cs
-│	│	├── AddPedidoTable.cs
-│	│	├── AddProdutoTable.cs
-│	│   └── README - Migrations.md
+│	├── Context/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Context.md
+│	├── Mappings/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Mappings.md
 │	├── Repositories/
-│	│	├── CategoriaRepository.cs
-│	│	├── PedidoRepository.cs
-│	│	├── ProdutoRepository.cs
-│	│  └── README - Repositories.md
-│	└── README - Infraestrutura.md
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Repositories.md
+│	└── _ Infraestrutura.md
 │	
 ├── ArjSys.Testes/
 │	├── # Dependências #
 │	│	├── Pacotes
-│	│	│	├── FluentAssertions
+│	│	│	├── Microsoft.NET.Test.Sdk
 │	│	│	├── Moq
-│	│	│	└── xunit
+│	│	│	├── xunit
+│	│	│	└── xunit.runner.visualstudio
 │	│	└── Projetos
 │	│		├── ArjSys.API
 │	│		├── ArjSys.Aplicacao
+│	│		├── ArjSys.Dominio
 │	│		└── ArjSys.Infraestrutura
-│	├── Helpers/
-│	│   └── README - Helpers.md
 │	├── IntegrationTests/
-│	│   └── README - IntegrationTests.md
+│	│   └── _ IntegrationTests.md
 │	├── UnitTests/
-│	│   └── README - UnitTests.md
-│	└── README - Testes.md
+│	│   └── _ UnitTests.md
+│	└── _ Testes.md
 │
 ├── ArjSys_Api.sln
 ├── Estrutura de Pastas e Arquivos.md
 └── README.md
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ArjSys-BackEnd
+│
+├── ArjSys.API/
+│	├── # Dependências #
+│	│	├── Pacotes
+│	│	└── Projetos
+│	├── Controllers/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Controllers.md
+│	├── Middleware/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Middleware.md
+│	├── appsettings.json
+│	├── Program.cs
+│	└── _ API.md
+│	
+├── ArjSys.Aplicacao/
+│	├── # Dependências #
+│	│	├── Pacotes
+│	│	└── Projetos
+│	├── DTOs/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ DTOs.md
+│	├── Interfaces/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Interfaces.md
+│	├── Services/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Services.md
+│	└── _ Aplicacao.md
+│	
+├── ArjSys.Dominio/
+│	├── Entities/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Entities.md
+│	├── Interfaces/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Interfaces.md
+│	├── Services/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Services.md
+│	└── _ Dominio.md
+│	
+├── ArjSys.Infraestrutura/
+│	├── # Dependências #
+│	│	├── Pacotes
+│	│	└── Projetos
+│	├── Context/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Context.md
+│	├── Mappings/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Mappings.md
+│	├── Repositories/
+│	│	├── arquivo_aqui.cs
+│	│   └── _ Repositories.md
+│	└── _ Infraestrutura.md
+│	
+├── ArjSys.Testes/
+│	├── # Dependências #
+│	│	├── Pacotes
+│	│	└── Projetos
+│	├── IntegrationTests/
+│	│   └── _ IntegrationTests.md
+│	├── UnitTests/
+│	│   └── _ UnitTests.md
+│	└── _ Testes.md
+│
+├── ArjSys_Api.sln
+├── Estrutura de Pastas e Arquivos.md
+└── README.md

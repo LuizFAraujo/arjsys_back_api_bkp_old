@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArjSys.Testes")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ad504f7d50da7b39399e2bb53522edf770b7b634")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+577b97a92ba82eec72dc1b5cf2865de98394a258")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArjSys.Testes")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArjSys.Testes")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

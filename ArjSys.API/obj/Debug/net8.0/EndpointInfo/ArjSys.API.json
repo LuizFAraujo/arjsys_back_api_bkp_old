@@ -1,24 +1,9 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "ArjSys API",
-    "description": "Documentação da API ArjSys",
-    "version": "v1"
+    "title": "ArjSys.API",
+    "version": "1.0"
   },
   "paths": { },
-  "components": {
-    "securitySchemes": {
-      "Bearer": {
-        "type": "apiKey",
-        "description": "Por favor, insira o token JWT",
-        "name": "Authorization",
-        "in": "header"
-      }
-    }
-  },
-  "security": [
-    {
-      "Bearer": [ ]
-    }
-  ]
+  "components": { }
 }

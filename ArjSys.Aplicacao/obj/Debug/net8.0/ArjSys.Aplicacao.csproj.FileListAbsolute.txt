@@ -1,12 +1,15 @@
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\bin\Debug\net8.0\ArjSys.Aplicacao.deps.json
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\bin\Debug\net8.0\ArjSys.Aplicacao.dll
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\bin\Debug\net8.0\ArjSys.Aplicacao.pdb
+D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\bin\Debug\net8.0\ArjSys.Dominio.dll
+D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\bin\Debug\net8.0\ArjSys.Dominio.pdb
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.Aplicacao.csproj.AssemblyReference.cache
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.Aplicacao.AssemblyInfoInputs.cache
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.Aplicacao.AssemblyInfo.cs
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.Aplicacao.csproj.CoreCompileInputs.cache
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.Aplicacao.sourcelink.json
+D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.A.AA64FD88.Up2Date
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.Aplicacao.dll
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\refint\ArjSys.Aplicacao.dll
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Aplicacao\obj\Debug\net8.0\ArjSys.Aplicacao.pdb

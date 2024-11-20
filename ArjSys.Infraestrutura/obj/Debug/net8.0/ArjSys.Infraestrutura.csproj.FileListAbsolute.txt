@@ -2,9 +2,7 @@ D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\bin\Debug\net8.
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\bin\Debug\net8.0\ArjSys.Infraestrutura.runtimeconfig.json
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\bin\Debug\net8.0\ArjSys.Infraestrutura.dll
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\bin\Debug\net8.0\ArjSys.Infraestrutura.pdb
-D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\bin\Debug\net8.0\ArjSys.Aplicacao.dll
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\bin\Debug\net8.0\ArjSys.Dominio.dll
-D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\bin\Debug\net8.0\ArjSys.Aplicacao.pdb
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\bin\Debug\net8.0\ArjSys.Dominio.pdb
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\obj\Debug\net8.0\ArjSys.Infraestrutura.csproj.AssemblyReference.cache
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Infraestrutura\obj\Debug\net8.0\ArjSys.Infraestrutura.GeneratedMSBuildEditorConfig.editorconfig

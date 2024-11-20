@@ -1,7 +1,6 @@
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Dominio\bin\Debug\net8.0\ArjSys.Dominio.deps.json
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Dominio\bin\Debug\net8.0\ArjSys.Dominio.dll
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Dominio\bin\Debug\net8.0\ArjSys.Dominio.pdb
-D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Dominio\obj\Debug\net8.0\ArjSys.Dominio.csproj.AssemblyReference.cache
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Dominio\obj\Debug\net8.0\ArjSys.Dominio.GeneratedMSBuildEditorConfig.editorconfig
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Dominio\obj\Debug\net8.0\ArjSys.Dominio.AssemblyInfoInputs.cache
 D:\@POS\@ TCC\SISTEMA\BACK\arjsys_back_api\ArjSys.Dominio\obj\Debug\net8.0\ArjSys.Dominio.AssemblyInfo.cs

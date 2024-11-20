@@ -35,6 +35,9 @@
               "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Aplicacao\\ArjSys.Aplicacao.csproj": {
                 "projectPath": "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Aplicacao\\ArjSys.Aplicacao.csproj"
               },
+              "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Dominio\\ArjSys.Dominio.csproj": {
+                "projectPath": "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Dominio\\ArjSys.Dominio.csproj"
+              },
               "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Infraestrutura\\ArjSys.Infraestrutura.csproj": {
                 "projectPath": "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Infraestrutura\\ArjSys.Infraestrutura.csproj"
               }
@@ -57,17 +60,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "AutoMapper": {
+            "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[8.0.11, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.11, )"
             },
-            "Microsoft.Extensions.DependencyInjection": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[9.0.0, )"
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -124,7 +133,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Dominio\\ArjSys.Dominio.csproj": {
+                "projectPath": "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Dominio\\ArjSys.Dominio.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -146,6 +159,10 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "FluentValidation.DependencyInjectionExtensions": {
+              "target": "Package",
+              "version": "[11.11.0, )"
             }
           },
           "imports": [
@@ -213,12 +230,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "FluentValidation": {
-              "target": "Package",
-              "version": "[11.11.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -267,9 +278,6 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Aplicacao\\ArjSys.Aplicacao.csproj": {
-                "projectPath": "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Aplicacao\\ArjSys.Aplicacao.csproj"
-              },
               "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Dominio\\ArjSys.Dominio.csproj": {
                 "projectPath": "D:\\@POS\\@ TCC\\SISTEMA\\BACK\\arjsys_back_api\\ArjSys.Dominio\\ArjSys.Dominio.csproj"
               }
@@ -296,13 +304,13 @@
               "target": "Package",
               "version": "[8.0.11, )"
             },
-            "Microsoft.EntityFrameworkCore.Sqlite": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.11, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
               "version": "[8.0.11, )"
             }
