@@ -1,4 +1,8 @@
+using SYS.APPLICATION.Interfaces;
+using SYS.APPLICATION.Services;
+using SYS.DOMAIN.Interfaces;
 using SYS.INFRASTRUCTURE.Data;
+using SYS.INFRASTRUCTURE.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +14,11 @@ builder.Services.AddControllers();
 
 builder.Services.AddDbContext<AppDbContext>(); // Adiciona o DbContext
 builder.Services.AddAutoMapper(typeof(Program)); // Adiciona o AutoMapper
+
+
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
+builder.Services.AddScoped<IProdutoService, ProdutoService>();
+
 
 
 // Adiciona a configuração do Swagger (Documentação da API)

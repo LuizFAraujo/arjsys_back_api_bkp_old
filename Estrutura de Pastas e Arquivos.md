@@ -23,7 +23,7 @@ SYS/
 │   └── Middlewares/
 │       └── ExceptionMiddleware.cs
 ├── APPLICATION/
-│   ├── Dtos/
+│   ├── DTOs/
 │   │   ├── AlmoxarifadoDto.cs
 │   │   ├── CompraDto.cs
 │   │   ├── PessoaDto.cs
