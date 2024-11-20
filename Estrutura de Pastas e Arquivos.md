@@ -3,109 +3,159 @@
 Este documento descreve a estrutura das pastas e arquivos do projeto ArjSys.
 Ele fornece uma visão geral de como o código está organizado em camadas e módulos, explicando a função de cada pasta.
 
-### Função
-- Ajudar na compreensão da estrutura do projeto.
-- Fornecer uma referência rápida sobre onde cada parte do código está localizada.
-- Facilitar a navegação e manutenção do código para desenvolvedores.
+
+
+SYS/
+├── # Dependências #
+│	└── Pacotes
+│		├── AutoMapper
+│		├── Microsoft.EntityFrameworkCore.Sqlite
+│		├── Microsoft.EntityFrameworkCore.Tools
+│		└── Swashbuckle.AspNetCore
+├── API/
+│   ├── Controllers/
+│   │   ├── AlmoxarifadoController.cs
+│   │   ├── ComprasController.cs
+│   │   ├── PessoasController.cs
+│   │   ├── ProducaoController.cs
+│   │   ├── ProdutosController.cs
+│   │   └── VendasController.cs
+│   └── Middlewares/
+│       └── ExceptionMiddleware.cs
+├── APPLICATION/
+│   ├── Dtos/
+│   │   ├── AlmoxarifadoDto.cs
+│   │   ├── CompraDto.cs
+│   │   ├── PessoaDto.cs
+│   │   ├── ProducaoDto.cs
+│   │   ├── ProdutoDto.cs
+│   │   └── VendaDto.cs
+│   ├── Interfaces/
+│   │   ├── IAlmoxarifadoService.cs
+│   │   ├── ICompraService.cs
+│   │   ├── IPessoaService.cs
+│   │   ├── IProducaoService.cs
+│   │   ├── IProdutoService.cs
+│   │   └── IVendaService.cs
+│   ├── Services/
+│   │   ├── AlmoxarifadoService.cs
+│   │   ├── CompraService.cs
+│   │   ├── PessoaService.cs
+│   │   ├── ProducaoService.cs
+│   │   ├── ProdutoService.cs
+│   │   └── VendaService.cs
+│   └── Mappers/
+│       └── AutoMapperProfiles.cs
+├── DOMAIN/
+│   ├── Entities/
+│   │   ├── Almoxarifado/
+│   │   │   ├── Almoxarifado.cs
+│   │   │   ├── MateriaPrima.cs
+│   │   │   └── MovimentacaoEstoque.cs
+│   │   ├── Compras/
+│   │   │   ├── Compra.cs
+│   │   │   └── ItemCompra.cs
+│   │   ├── Pessoas/
+│   │   │   ├── Pessoa.cs
+│   │   │   └── Setor.cs
+│   │   ├── Producao/
+│   │   │   ├── OrdemProducao.cs
+│   │   │   └── Producao.cs
+│   │   ├── Produtos/
+│   │   │   ├── EstruturaProduto.cs
+│   │   │   ├── Produto.cs
+│   │   │   └── TipoProduto.cs
+│   │   ├── Shared/
+│   │   │   ├── BaseEntity.cs
+│   │   │   └── AuditInfo.cs
+│   │   └── Vendas/
+│   │       ├── ItemVenda.cs
+│   │       └── Venda.cs
+│   ├── Enums/
+│   │   ├── SetorEnum.cs
+│   │   ├── StatusCompraEnum.cs
+│   │   └── StatusProducaoEnum.cs
+│   ├── Exceptions/
+│   │   ├── DomainException.cs
+│   │   └── NotFoundException.cs
+│   ├── Interfaces/
+│   │   └── IRepository.cs
+│   └── Specifications/
+│       ├── ProdutoSpecification.cs
+│       └── VendaSpecification.cs
+├── INFRASTRUCTURE/
+│   ├── Data/
+│   │   ├── AppDbContext.cs
+│   │   ├── Configurations/
+│   │   │   ├── AlmoxarifadoConfiguration.cs
+│   │   │   ├── CompraConfiguration.cs
+│   │   │   ├── PessoaConfiguration.cs
+│   │   │   ├── ProducaoConfiguration.cs
+│   │   │   ├── ProdutoConfiguration.cs
+│   │   │   └── VendaConfiguration.cs
+│   │   ├── Migrations/
+│   │   └── SeedData/
+│   │       ├── PessoaSeed.cs
+│   │       ├── ProdutoSeed.cs
+│   │       └── UsuarioSeed.cs
+│   ├── Logging/
+│   │   └── FileLogger.cs
+│   └── Repositories/
+│       ├── AlmoxarifadoRepository.cs
+│       ├── CompraRepository.cs
+│       ├── PessoaRepository.cs
+│       ├── ProducaoRepository.cs
+│       ├── ProdutoRepository.cs
+│       └── VendaRepository.cs
+├── Tests/
+│   ├── UnitTests/
+│   │   ├── Services/
+│   │   └── Repositories/
+│   └── IntegrationTests/
+│       ├── Controllers/
+│       └── Endpoints/
+├── appsettings.json
+└── Program.cs
 
 
 
 
-ArjSys-BackEnd
-│
-├── ArjSys.API/
-│	├── # Dependências #
-│	│	├── Pacotes
-│	│	│	├── Microsoft.AspNetCore.OpenApi
-│	│	│	├── Microsoft.EntityFrameworkCore
-│	│	│	├── Microsoft.EntityFrameworkCore.Design
-│	│	│	├── Microsoft.EntityFrameworkCore.Sqlite
-│	│	│	└── Swashbuckle.AspNetCore
-│	│	└── Projetos
-│	│		├── ArjSys.Aplicacao
-│	│		├── ArjSys.Dominio
-│	│		└── ArjSys.Infraestrutura
-│	├── Controllers/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Controllers.md
-│	├── Middleware/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Middleware.md
-│	├── appsettings.json
-│	├── Program.cs
-│	└── _ API.md
-│	
-├── ArjSys.Aplicacao/
-│	├── # Dependências #
-│	│	├── Pacotes
-│	│	│	├── AutoMapper
-│	│	│	└── FluentValidation.DependencyInjectionExtensions
-│	│	└── Projetos
-│	│		├── ArjSys.Dominio
-│	│		└── ArjSys.Infraestrutura
-│	├── DTOs/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ DTOs.md
-│	├── Interfaces/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Interfaces.md
-│	├── Services/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Services.md
-│	└── _ Aplicacao.md
-│	
-├── ArjSys.Dominio/
-│	├── Entities/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Entities.md
-│	├── Interfaces/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Interfaces.md
-│	├── Services/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Services.md
-│	└── _ Dominio.md
-│	
-├── ArjSys.Infraestrutura/
-│	├── # Dependências #
-│	│	├── Pacotes
-│	│	│	├── Microsoft.EntityFrameworkCore
-│	│	│	├── Microsoft.EntityFrameworkCore.Design
-│	│	│	└── Microsoft.EntityFrameworkCore.Sqlite
-│	│	└── Projetos
-│	│		└── ArjSys.Dominio
-│	├── Context/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Context.md
-│	├── Mappings/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Mappings.md
-│	├── Repositories/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Repositories.md
-│	└── _ Infraestrutura.md
-│	
-├── ArjSys.Testes/
-│	├── # Dependências #
-│	│	├── Pacotes
-│	│	│	├── Microsoft.NET.Test.Sdk
-│	│	│	├── Moq
-│	│	│	├── xunit
-│	│	│	└── xunit.runner.visualstudio
-│	│	└── Projetos
-│	│		├── ArjSys.API
-│	│		├── ArjSys.Aplicacao
-│	│		├── ArjSys.Dominio
-│	│		└── ArjSys.Infraestrutura
-│	├── IntegrationTests/
-│	│   └── _ IntegrationTests.md
-│	├── UnitTests/
-│	│   └── _ UnitTests.md
-│	└── _ Testes.md
-│
-├── ArjSys_Api.sln
-├── Estrutura de Pastas e Arquivos.md
-└── README.md
+
+
+
+
+
+├── appsettings.Development.json
+
+
+SYS/
+├── # Dependências #
+│	└── Pacotes
+│		├── AutoMapper
+│		├── Microsoft.EntityFrameworkCore.Sqlite
+│		├── Microsoft.EntityFrameworkCore.Tools
+│		└── Swashbuckle.AspNetCore
+├── API/
+│   ├── Controllers/
+│   │   ├── ProdutosController.cs
+├── APPLICATION/
+├── DOMAIN/
+│   ├── Entities/
+│   │   ├── Almoxarifado/
+│   │   ├── Compras/
+│   │   ├── Pessoas/
+│   │   ├── Producao/
+│   │   ├── Produtos/
+│   │   │   ├── Produto.cs
+│   │   ├── Shared/
+│   │   └── Vendas/
+│   │       ├── ItemVenda.cs
+│   │       └── Venda.cs
+├── INFRASTRUCTURE/
+│   ├── Data/
+│   │   ├── AppDbContext.cs
+├── appsettings.json
+└── Program.cs
 
 
 
@@ -119,76 +169,3 @@ ArjSys-BackEnd
 
 
 
-
-
-ArjSys-BackEnd
-│
-├── ArjSys.API/
-│	├── # Dependências #
-│	│	├── Pacotes
-│	│	└── Projetos
-│	├── Controllers/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Controllers.md
-│	├── Middleware/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Middleware.md
-│	├── appsettings.json
-│	├── Program.cs
-│	└── _ API.md
-│	
-├── ArjSys.Aplicacao/
-│	├── # Dependências #
-│	│	├── Pacotes
-│	│	└── Projetos
-│	├── DTOs/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ DTOs.md
-│	├── Interfaces/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Interfaces.md
-│	├── Services/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Services.md
-│	└── _ Aplicacao.md
-│	
-├── ArjSys.Dominio/
-│	├── Entities/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Entities.md
-│	├── Interfaces/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Interfaces.md
-│	├── Services/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Services.md
-│	└── _ Dominio.md
-│	
-├── ArjSys.Infraestrutura/
-│	├── # Dependências #
-│	│	├── Pacotes
-│	│	└── Projetos
-│	├── Context/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Context.md
-│	├── Mappings/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Mappings.md
-│	├── Repositories/
-│	│	├── arquivo_aqui.cs
-│	│   └── _ Repositories.md
-│	└── _ Infraestrutura.md
-│	
-├── ArjSys.Testes/
-│	├── # Dependências #
-│	│	├── Pacotes
-│	│	└── Projetos
-│	├── IntegrationTests/
-│	│   └── _ IntegrationTests.md
-│	├── UnitTests/
-│	│   └── _ UnitTests.md
-│	└── _ Testes.md
-│
-├── ArjSys_Api.sln
-├── Estrutura de Pastas e Arquivos.md
-└── README.md

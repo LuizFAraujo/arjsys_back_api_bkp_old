@@ -24,5 +24,12 @@ dist-ssr
 *.sln
 *.sw?
 
-# Diretórios e Arquivos resultantes de compilação/execução
-**/bin/*
+# Ignorar pasta de saída de compilação
+**/bin/
+**/obj/
+
+# Ignorar o banco SQLite
+**/*.db
+**/*.sqlite
+**/*.sqlite3
+
