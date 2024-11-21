@@ -10,13 +10,13 @@ namespace SYS.INFRASTRUCTURE.Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public DbSet<Almoxarifado> Almoxarifados { get; set; }
-    public DbSet<Compra> Compras { get; set; }
-    public DbSet<Pessoa> Pessoas { get; set; }
-    public DbSet<Produto> Produtos { get; set; }
-    public DbSet<Producao> Producoes { get; set; }
-    public DbSet<OrdemProducao> OrdensProducao { get; set; }
-    public DbSet<Venda> Vendas { get; set; }
+    public DbSet<Almoxarifado> Almoxarifados { get; set; } = default!;
+    public DbSet<Compra> Compras { get; set; } = default!;
+    public DbSet<Pessoa> Pessoas { get; set; } = default!;
+    public DbSet<Produto> Produtos { get; set; } = default!;
+    public DbSet<Producao> Producoes { get; set; } = default!;
+    public DbSet<OrdemProducao> OrdensProducao { get; set; } = default!;
+    public DbSet<Venda> Vendas { get; set; } = default!;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
