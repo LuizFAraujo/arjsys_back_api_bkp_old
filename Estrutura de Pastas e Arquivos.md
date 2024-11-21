@@ -40,8 +40,7 @@ SYS/
 │   │   │   ├── Compra.cs
 │   │   │   └── ItemCompra.cs
 │   │   ├── Pessoas/
-│   │   │   ├── Pessoa.cs
-│   │   │   └── Setor.cs
+│   │   │   └── Pessoa.cs
 │   │   ├── Producao/
 │   │   │   ├── OrdemProducao.cs
 │   │   │   └── Producao.cs
@@ -59,14 +58,21 @@ SYS/
 │   │   ├── IProdutoRepository.cs
 │   │   └── IVendaRepository.cs
 │   └── Specifications/
-│       ├── ProdutoSpecification.cs
-│       └── VendaSpecification.cs
 │
 ├── INFRASTRUCTURE/
 │   ├── Data/
 │   │   ├── Configurations/
 │   │   ├── Migrations/
 │   │   ├── SeedData/
+│   │   │   ├── Compras/
+│   │   │   │   ├── ComprasSeed.cs
+│   │   │   │   └── ComprasSeed.json
+│   │   │   ├── Produtos/
+│   │   │   │   ├── ProdutosSeed.cs
+│   │   │   │   └── ProdutosSeed.json
+│   │   │   ├── Vendas/
+│   │   │   │   ├── VendasSeed.cs
+│   │   │   │   └── VendasSeed.json
 │   │   │   └── SeedDatabase.cs
 │   │   └── AppDbContext.cs
 │   ├── Logging/
