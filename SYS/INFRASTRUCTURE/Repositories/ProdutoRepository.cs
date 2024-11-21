@@ -1,0 +1,43 @@
+﻿using SYS.DOMAIN.Entities.Produtos;
+using SYS.DOMAIN.Interfaces;
+using SYS.INFRASTRUCTURE.Data;
+
+namespace SYS.INFRASTRUCTURE.Repositories;
+
+public class ProdutoRepository(AppDbContext context) : IProdutoRepository
+{
+    private readonly AppDbContext _context = context;
+
+    public IEnumerable<Produto> GetAll()
+    {
+        //return _context.Produtos.ToList();
+        return [.. _context.Produtos];
+    }
+
+    public Produto GetById(int id)
+    {
+        return _context.Produtos.Find(id) ?? throw new KeyNotFoundException("Produto não encontrado.");
+    }
+
+    public void Add(Produto produto)
+    {
+        _context.Produtos.Add(produto);
+        _context.SaveChanges();
+    }
+
+    public void Update(Produto produto)
+    {
+        _context.Produtos.Update(produto);
+        _context.SaveChanges();
+    }
+
+    public void Delete(int id)
+    {
+        var produto = _context.Produtos.Find(id);
+        if (produto != null)
+        {
+            _context.Produtos.Remove(produto);
+            _context.SaveChanges();
+        }
+    }
+}

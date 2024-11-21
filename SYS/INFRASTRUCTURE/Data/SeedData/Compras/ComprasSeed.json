@@ -1,0 +1,338 @@
+﻿[
+  {
+    "DataCompra": "2024-01-01T00:00:00",
+    "ValorTotal": 110.75,
+    "Itens": [
+      {
+        "ProdutoId": 1,
+        "Quantidade": 5,
+        "Valor": 25.25
+      },
+      {
+        "ProdutoId": 2,
+        "Quantidade": 4,
+        "Valor": 20.50
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-01T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-02T00:00:00",
+    "ValorTotal": 165.00,
+    "Itens": [
+      {
+        "ProdutoId": 3,
+        "Quantidade": 7,
+        "Valor": 40.25
+      },
+      {
+        "ProdutoId": 4,
+        "Quantidade": 5,
+        "Valor": 38.50
+      },
+      {
+        "ProdutoId": 5,
+        "Quantidade": 3,
+        "Valor": 86.25
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-02T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-03T00:00:00",
+    "ValorTotal": 220.50,
+    "Itens": [
+      {
+        "ProdutoId": 6,
+        "Quantidade": 8,
+        "Valor": 20.00
+      },
+      {
+        "ProdutoId": 7,
+        "Quantidade": 12,
+        "Valor": 16.50
+      },
+      {
+        "ProdutoId": 8,
+        "Quantidade": 5,
+        "Valor": 48.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-03T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-04T00:00:00",
+    "ValorTotal": 140.50,
+    "Itens": [
+      {
+        "ProdutoId": 9,
+        "Quantidade": 6,
+        "Valor": 30.50
+      },
+      {
+        "ProdutoId": 10,
+        "Quantidade": 4,
+        "Valor": 34.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-04T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-05T00:00:00",
+    "ValorTotal": 290.25,
+    "Itens": [
+      {
+        "ProdutoId": 11,
+        "Quantidade": 15,
+        "Valor": 35.25
+      },
+      {
+        "ProdutoId": 12,
+        "Quantidade": 8,
+        "Valor": 44.50
+      },
+      {
+        "ProdutoId": 13,
+        "Quantidade": 3,
+        "Valor": 210.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-05T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-06T00:00:00",
+    "ValorTotal": 145.75,
+    "Itens": [
+      {
+        "ProdutoId": 14,
+        "Quantidade": 4,
+        "Valor": 36.50
+      },
+      {
+        "ProdutoId": 15,
+        "Quantidade": 7,
+        "Valor": 109.25
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-06T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-07T00:00:00",
+    "ValorTotal": 200.00,
+    "Itens": [
+      {
+        "ProdutoId": 16,
+        "Quantidade": 5,
+        "Valor": 40.00
+      },
+      {
+        "ProdutoId": 17,
+        "Quantidade": 12,
+        "Valor": 60.00
+      },
+      {
+        "ProdutoId": 18,
+        "Quantidade": 2,
+        "Valor": 100.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-07T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-08T00:00:00",
+    "ValorTotal": 160.25,
+    "Itens": [
+      {
+        "ProdutoId": 19,
+        "Quantidade": 9,
+        "Valor": 24.25
+      },
+      {
+        "ProdutoId": 20,
+        "Quantidade": 5,
+        "Valor": 52.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-08T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-09T00:00:00",
+    "ValorTotal": 130.00,
+    "Itens": [
+      {
+        "ProdutoId": 1,
+        "Quantidade": 3,
+        "Valor": 19.50
+      },
+      {
+        "ProdutoId": 2,
+        "Quantidade": 4,
+        "Valor": 18.50
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-09T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-10T00:00:00",
+    "ValorTotal": 210.50,
+    "Itens": [
+      {
+        "ProdutoId": 3,
+        "Quantidade": 7,
+        "Valor": 41.25
+      },
+      {
+        "ProdutoId": 4,
+        "Quantidade": 3,
+        "Valor": 63.75
+      },
+      {
+        "ProdutoId": 5,
+        "Quantidade": 2,
+        "Valor": 105.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-10T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-11T00:00:00",
+    "ValorTotal": 300.75,
+    "Itens": [
+      {
+        "ProdutoId": 6,
+        "Quantidade": 10,
+        "Valor": 55.00
+      },
+      {
+        "ProdutoId": 7,
+        "Quantidade": 12,
+        "Valor": 120.75
+      },
+      {
+        "ProdutoId": 8,
+        "Quantidade": 7,
+        "Valor": 125.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-11T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-12T00:00:00",
+    "ValorTotal": 175.25,
+    "Itens": [
+      {
+        "ProdutoId": 9,
+        "Quantidade": 5,
+        "Valor": 30.25
+      },
+      {
+        "ProdutoId": 10,
+        "Quantidade": 8,
+        "Valor": 145.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-12T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-13T00:00:00",
+    "ValorTotal": 195.00,
+    "Itens": [
+      {
+        "ProdutoId": 11,
+        "Quantidade": 10,
+        "Valor": 85.00
+      },
+      {
+        "ProdutoId": 12,
+        "Quantidade": 5,
+        "Valor": 110.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-13T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-14T00:00:00",
+    "ValorTotal": 230.50,
+    "Itens": [
+      {
+        "ProdutoId": 13,
+        "Quantidade": 8,
+        "Valor": 80.50
+      },
+      {
+        "ProdutoId": 14,
+        "Quantidade": 7,
+        "Valor": 150.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-14T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-15T00:00:00",
+    "ValorTotal": 290.00,
+    "Itens": [
+      {
+        "ProdutoId": 15,
+        "Quantidade": 12,
+        "Valor": 95.00
+      },
+      {
+        "ProdutoId": 16,
+        "Quantidade": 10,
+        "Valor": 195.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-15T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-16T00:00:00",
+    "ValorTotal": 180.00,
+    "Itens": [
+      {
+        "ProdutoId": 17,
+        "Quantidade": 6,
+        "Valor": 35.50
+      },
+      {
+        "ProdutoId": 18,
+        "Quantidade": 5,
+        "Valor": 45.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-16T00:00:00"
+  },
+  {
+    "DataCompra": "2024-01-17T00:00:00",
+    "ValorTotal": 275.00,
+    "Itens": [
+      {
+        "ProdutoId": 19,
+        "Quantidade": 15,
+        "Valor": 120.00
+      },
+      {
+        "ProdutoId": 20,
+        "Quantidade": 7,
+        "Valor": 155.00
+      }
+    ],
+    "Ativo": true,
+    "DataCriacao": "2024-01-17T00:00:00"
+  }
+]

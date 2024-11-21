@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="API\Middlewares\" />
+    <Folder Include="APPLICATION\DTOs\" />
+    <Folder Include="APPLICATION\Mappers\" />
+    <Folder Include="DOMAIN\Enums\" />
+    <Folder Include="DOMAIN\Exceptions\" />
+    <Folder Include="DOMAIN\Specifications\" />
+    <Folder Include="INFRASTRUCTURE\Data\Configurations\" />
+    <Folder Include="INFRASTRUCTURE\Data\SeedData\Almoxarifado\MateriaPrimaSeed\" />
+    <Folder Include="INFRASTRUCTURE\Logging\" />
+  </ItemGroup>
+
+</Project>
