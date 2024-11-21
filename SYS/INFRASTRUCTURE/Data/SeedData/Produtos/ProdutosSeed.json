@@ -1,0 +1,22 @@
+﻿[
+  { "Codigo": "P001", "Descricao": "Cadeira de Escritório", "MateriaPrima": "Plástico Reciclado", "Ativo": true },
+  { "Codigo": "P002", "Descricao": "Mesa de Jantar", "MateriaPrima": "Madeira de Carvalho", "Ativo": true },
+  { "Codigo": "P003", "Descricao": "Luminária de Mesa", "MateriaPrima": "Vidro Temperado", "Ativo": true },
+  { "Codigo": "P004", "Descricao": "Tapete Persa", "MateriaPrima": "Fibras Naturais", "Ativo": false },
+  { "Codigo": "P005", "Descricao": "Sofá Modular", "MateriaPrima": "Espuma de Alta Densidade", "Ativo": true },
+  { "Codigo": "P006", "Descricao": "Poltrona Lounge", "MateriaPrima": "Couro Sintético", "Ativo": true },
+  { "Codigo": "P007", "Descricao": "Estante de Livros", "MateriaPrima": "Madeira de Eucalipto", "Ativo": true },
+  { "Codigo": "P008", "Descricao": "Mesa de Café", "MateriaPrima": "Aço Inoxidável", "Ativo": true },
+  { "Codigo": "P009", "Descricao": "Cama Box", "MateriaPrima": "Molas Ensacadas", "Ativo": false },
+  { "Codigo": "P010", "Descricao": "Rack para TV", "MateriaPrima": "MDF", "Ativo": true },
+  { "Codigo": "P011", "Descricao": "Cadeira Gamer", "MateriaPrima": "Poliéster de Alta Resistência", "Ativo": true },
+  { "Codigo": "P012", "Descricao": "Painel de TV", "MateriaPrima": "Aço Pintado", "Ativo": false },
+  { "Codigo": "P013", "Descricao": "Banco de Couro", "MateriaPrima": "Couro Natural", "Ativo": true },
+  { "Codigo": "P014", "Descricao": "Mesa de Escritório", "MateriaPrima": "Madeira de Pinus", "Ativo": true },
+  { "Codigo": "P015", "Descricao": "Armário para Roupas", "MateriaPrima": "Compensado de Madeira", "Ativo": true },
+  { "Codigo": "P016", "Descricao": "Espelho de Parede", "MateriaPrima": "Alumínio e Vidro", "Ativo": true },
+  { "Codigo": "P017", "Descricao": "Cadeira de Balanço", "MateriaPrima": "Madeira de Freijo", "Ativo": false },
+  { "Codigo": "P018", "Descricao": "Manta de Sofá", "MateriaPrima": "Lã de Ovelha", "Ativo": true },
+  { "Codigo": "P019", "Descricao": "Sofá Cama", "MateriaPrima": "Tecido Acetinada", "Ativo": true },
+  { "Codigo": "P020", "Descricao": "Cômoda de Quarto", "MateriaPrima": "MDF Branco", "Ativo": true }
+]

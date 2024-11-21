@@ -57,7 +57,7 @@ SYS/
 │   ├── Interfaces/
 │   │   ├── ICompraRepository.cs
 │   │   ├── IProdutoRepository.cs
-│   │   └── IRepository.cs
+│   │   └── IVendaRepository.cs
 │   └── Specifications/
 │       ├── ProdutoSpecification.cs
 │       └── VendaSpecification.cs
