@@ -10,6 +10,10 @@ namespace SYS.INFRASTRUCTURE.Data;
 
 public class AppDbContext : DbContext
 {
+
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+
+
     public DbSet<Almoxarifado> Almoxarifados { get; set; }
     public DbSet<Compra> Compras { get; set; }
     public DbSet<Pessoa> Pessoas { get; set; }

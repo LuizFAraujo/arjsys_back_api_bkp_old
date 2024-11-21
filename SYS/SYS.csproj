@@ -23,7 +23,6 @@
     <Folder Include="DOMAIN\Exceptions\" />
     <Folder Include="INFRASTRUCTURE\Data\Configurations\" />
     <Folder Include="INFRASTRUCTURE\Data\Migrations\" />
-    <Folder Include="INFRASTRUCTURE\Data\SeedData\" />
     <Folder Include="INFRASTRUCTURE\Logging\" />
   </ItemGroup>
 

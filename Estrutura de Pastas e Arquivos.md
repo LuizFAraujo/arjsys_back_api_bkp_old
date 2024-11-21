@@ -128,6 +128,10 @@ SYS/
 ├── appsettings.Development.json
 
 
+
+
+
+
 SYS/
 ├── # Dependências #
 │	└── Pacotes
@@ -139,21 +143,46 @@ SYS/
 │   ├── Controllers/
 │   │   ├── ProdutosController.cs
 ├── APPLICATION/
+│   ├── DTOs/
+│   ├── Interfaces/
+│   │   ├── IProdutoService.cs
+│   ├── Services/
+│   │   ├── ProdutoService.cs
+│   └── Mappers/
 ├── DOMAIN/
 │   ├── Entities/
 │   │   ├── Almoxarifado/
+│   │   │   ├── Almoxarifado.cs
+│   │   │   ├── MateriaPrima.cs
+│   │   │   └── MovimentacaoEstoque.cs
 │   │   ├── Compras/
+│   │   │   ├── Compra.cs
+│   │   │   └── ItemCompra.cs
 │   │   ├── Pessoas/
+│   │   │   ├── Pessoa.cs
+│   │   │   └── Setor.cs
 │   │   ├── Producao/
+│   │   │   ├── OrdemProducao.cs
+│   │   │   └── Producao.cs
 │   │   ├── Produtos/
+│   │   │   ├── EstruturaProduto.cs
 │   │   │   ├── Produto.cs
+│   │   │   └── TipoProduto.cs
 │   │   ├── Shared/
+│   │   │   ├── BaseEntity.cs
 │   │   └── Vendas/
 │   │       ├── ItemVenda.cs
 │   │       └── Venda.cs
 ├── INFRASTRUCTURE/
 │   ├── Data/
 │   │   ├── AppDbContext.cs
+│   │   ├── Configurations/
+│   │   ├── Migrations/
+│   │   └── SeedData/
+│   ├── Logging/
+│   └── Repositories/
+│       ├── ProdutoRepository.cs
+├── Migrations/
 ├── appsettings.json
 └── Program.cs
 

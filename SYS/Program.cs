@@ -2,6 +2,7 @@ using SYS.APPLICATION.Interfaces;
 using SYS.APPLICATION.Services;
 using SYS.DOMAIN.Interfaces;
 using SYS.INFRASTRUCTURE.Data;
+using SYS.INFRASTRUCTURE.Data.SeedData;
 using SYS.INFRASTRUCTURE.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +20,8 @@ builder.Services.AddAutoMapper(typeof(Program)); // Adiciona o AutoMapper
 builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 builder.Services.AddScoped<IProdutoService, ProdutoService>();
 
+builder.Services.AddScoped<IVendaRepository, VendaRepository>();
+builder.Services.AddScoped<IVendaService, VendaService>();
 
 
 // Adiciona a configuração do Swagger (Documentação da API)
@@ -34,6 +37,15 @@ builder.Services.AddSwaggerGen(); // Gera o Swagger UI
 // ===================================================================
 
 var app = builder.Build();
+
+
+
+// Chama o seed data para popular o banco de dados
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    SeedDatabase.Initialize(services);
+}
 
 
 // Configura o pipeline de requisições HTTP
