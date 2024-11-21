@@ -23,6 +23,9 @@ builder.Services.AddScoped<IProdutoService, ProdutoService>();
 builder.Services.AddScoped<IVendaRepository, VendaRepository>();
 builder.Services.AddScoped<IVendaService, VendaService>();
 
+builder.Services.AddScoped<ICompraRepository, CompraRepository>();
+builder.Services.AddScoped<ICompraService, CompraService>();
+
 
 // Adiciona a configuração do Swagger (Documentação da API)
 builder.Services.AddEndpointsApiExplorer(); // Necessário para o Swagger

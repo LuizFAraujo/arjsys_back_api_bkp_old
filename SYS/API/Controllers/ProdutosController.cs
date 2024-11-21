@@ -2,65 +2,59 @@
 using SYS.DOMAIN.Entities.Produtos;
 using SYS.APPLICATION.Interfaces;
 
-namespace SYS.API.Controllers
+namespace SYS.API.Controllers;
+
+[ApiController]
+[Route("[controller]")]
+public class ProdutosController(IProdutoService produtoService) : ControllerBase
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class ProdutosController : ControllerBase
+    private readonly IProdutoService _produtoService = produtoService;
+
+    [HttpGet]
+    public IActionResult Get()
     {
-        private readonly IProdutoService _produtoService;
+        var produtos = _produtoService.GetAll();
+        return Ok(produtos);
+    }
 
-        public ProdutosController(IProdutoService produtoService)
+    [HttpGet("{id}")]
+    public IActionResult Get(int id)
+    {
+        var produto = _produtoService.GetById(id);
+        if (produto == null)
         {
-            _produtoService = produtoService;
+            return NotFound();
         }
+        return Ok(produto);
+    }
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            var produtos = _produtoService.GetAll();
-            return Ok(produtos);
-        }
+    [HttpPost]
+    public IActionResult Post(Produto produto)
+    {
+        _produtoService.Add(produto);
+        return CreatedAtAction(nameof(Get), new { id = produto.Id }, produto);
+    }
 
-        [HttpGet("{id}")]
-        public IActionResult Get(int id)
+    [HttpPut("{id}")]
+    public IActionResult Put(int id, Produto produto)
+    {
+        if (id != produto.Id)
         {
-            var produto = _produtoService.GetById(id);
-            if (produto == null)
-            {
-                return NotFound();
-            }
-            return Ok(produto);
+            return BadRequest();
         }
+        _produtoService.Update(produto);
+        return NoContent();
+    }
 
-        [HttpPost]
-        public IActionResult Post(Produto produto)
+    [HttpDelete("{id}")]
+    public IActionResult Delete(int id)
+    {
+        var produto = _produtoService.GetById(id);
+        if (produto == null)
         {
-            _produtoService.Add(produto);
-            return CreatedAtAction(nameof(Get), new { id = produto.Id }, produto);
+            return NotFound();
         }
-
-        [HttpPut("{id}")]
-        public IActionResult Put(int id, Produto produto)
-        {
-            if (id != produto.Id)
-            {
-                return BadRequest();
-            }
-            _produtoService.Update(produto);
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
-        {
-            var produto = _produtoService.GetById(id);
-            if (produto == null)
-            {
-                return NotFound();
-            }
-            _produtoService.Delete(id);
-            return NoContent();
-        }
+        _produtoService.Delete(id);
+        return NoContent();
     }
 }

@@ -12,46 +12,30 @@ SYS/
 │		├── Microsoft.EntityFrameworkCore.Sqlite
 │		├── Microsoft.EntityFrameworkCore.Tools
 │		└── Swashbuckle.AspNetCore
+│
 ├── API/
 │   ├── Controllers/
-│   │   ├── AlmoxarifadoController.cs
 │   │   ├── ComprasController.cs
-│   │   ├── PessoasController.cs
-│   │   ├── ProducaoController.cs
 │   │   ├── ProdutosController.cs
 │   │   └── VendasController.cs
 │   └── Middlewares/
-│       └── ExceptionMiddleware.cs
+│
 ├── APPLICATION/
 │   ├── DTOs/
-│   │   ├── AlmoxarifadoDto.cs
-│   │   ├── CompraDto.cs
-│   │   ├── PessoaDto.cs
-│   │   ├── ProducaoDto.cs
-│   │   ├── ProdutoDto.cs
-│   │   └── VendaDto.cs
 │   ├── Interfaces/
-│   │   ├── IAlmoxarifadoService.cs
 │   │   ├── ICompraService.cs
-│   │   ├── IPessoaService.cs
-│   │   ├── IProducaoService.cs
 │   │   ├── IProdutoService.cs
 │   │   └── IVendaService.cs
-│   ├── Services/
-│   │   ├── AlmoxarifadoService.cs
-│   │   ├── CompraService.cs
-│   │   ├── PessoaService.cs
-│   │   ├── ProducaoService.cs
-│   │   ├── ProdutoService.cs
-│   │   └── VendaService.cs
-│   └── Mappers/
-│       └── AutoMapperProfiles.cs
+│   ├── Mappers/
+│   └── Services/
+│       ├── CompraService.cs
+│       ├── ProdutoService.cs
+│       └── VendaService.cs
+│
 ├── DOMAIN/
 │   ├── Entities/
 │   │   ├── Almoxarifado/
-│   │   │   ├── Almoxarifado.cs
-│   │   │   ├── MateriaPrima.cs
-│   │   │   └── MovimentacaoEstoque.cs
+│   │   │   └── Almoxarifado.cs
 │   │   ├── Compras/
 │   │   │   ├── Compra.cs
 │   │   │   └── ItemCompra.cs
@@ -62,139 +46,35 @@ SYS/
 │   │   │   ├── OrdemProducao.cs
 │   │   │   └── Producao.cs
 │   │   ├── Produtos/
-│   │   │   ├── EstruturaProduto.cs
-│   │   │   ├── Produto.cs
-│   │   │   └── TipoProduto.cs
+│   │   │   └── Produto.cs
 │   │   ├── Shared/
-│   │   │   ├── BaseEntity.cs
-│   │   │   └── AuditInfo.cs
+│   │   │   └── BaseEntity.cs
 │   │   └── Vendas/
 │   │       ├── ItemVenda.cs
 │   │       └── Venda.cs
 │   ├── Enums/
-│   │   ├── SetorEnum.cs
-│   │   ├── StatusCompraEnum.cs
-│   │   └── StatusProducaoEnum.cs
 │   ├── Exceptions/
-│   │   ├── DomainException.cs
-│   │   └── NotFoundException.cs
 │   ├── Interfaces/
+│   │   ├── ICompraRepository.cs
+│   │   ├── IProdutoRepository.cs
 │   │   └── IRepository.cs
 │   └── Specifications/
 │       ├── ProdutoSpecification.cs
 │       └── VendaSpecification.cs
+│
 ├── INFRASTRUCTURE/
 │   ├── Data/
-│   │   ├── AppDbContext.cs
 │   │   ├── Configurations/
-│   │   │   ├── AlmoxarifadoConfiguration.cs
-│   │   │   ├── CompraConfiguration.cs
-│   │   │   ├── PessoaConfiguration.cs
-│   │   │   ├── ProducaoConfiguration.cs
-│   │   │   ├── ProdutoConfiguration.cs
-│   │   │   └── VendaConfiguration.cs
 │   │   ├── Migrations/
-│   │   └── SeedData/
-│   │       ├── PessoaSeed.cs
-│   │       ├── ProdutoSeed.cs
-│   │       └── UsuarioSeed.cs
+│   │   ├── SeedData/
+│   │   │   └── SeedDatabase.cs
+│   │   └── AppDbContext.cs
 │   ├── Logging/
-│   │   └── FileLogger.cs
 │   └── Repositories/
-│       ├── AlmoxarifadoRepository.cs
 │       ├── CompraRepository.cs
-│       ├── PessoaRepository.cs
-│       ├── ProducaoRepository.cs
 │       ├── ProdutoRepository.cs
 │       └── VendaRepository.cs
-├── Tests/
-│   ├── UnitTests/
-│   │   ├── Services/
-│   │   └── Repositories/
-│   └── IntegrationTests/
-│       ├── Controllers/
-│       └── Endpoints/
+│
 ├── appsettings.json
 └── Program.cs
-
-
-
-
-
-
-
-
-
-├── appsettings.Development.json
-
-
-
-
-
-
-SYS/
-├── # Dependências #
-│	└── Pacotes
-│		├── AutoMapper
-│		├── Microsoft.EntityFrameworkCore.Sqlite
-│		├── Microsoft.EntityFrameworkCore.Tools
-│		└── Swashbuckle.AspNetCore
-├── API/
-│   ├── Controllers/
-│   │   ├── ProdutosController.cs
-├── APPLICATION/
-│   ├── DTOs/
-│   ├── Interfaces/
-│   │   ├── IProdutoService.cs
-│   ├── Services/
-│   │   ├── ProdutoService.cs
-│   └── Mappers/
-├── DOMAIN/
-│   ├── Entities/
-│   │   ├── Almoxarifado/
-│   │   │   ├── Almoxarifado.cs
-│   │   │   ├── MateriaPrima.cs
-│   │   │   └── MovimentacaoEstoque.cs
-│   │   ├── Compras/
-│   │   │   ├── Compra.cs
-│   │   │   └── ItemCompra.cs
-│   │   ├── Pessoas/
-│   │   │   ├── Pessoa.cs
-│   │   │   └── Setor.cs
-│   │   ├── Producao/
-│   │   │   ├── OrdemProducao.cs
-│   │   │   └── Producao.cs
-│   │   ├── Produtos/
-│   │   │   ├── EstruturaProduto.cs
-│   │   │   ├── Produto.cs
-│   │   │   └── TipoProduto.cs
-│   │   ├── Shared/
-│   │   │   ├── BaseEntity.cs
-│   │   └── Vendas/
-│   │       ├── ItemVenda.cs
-│   │       └── Venda.cs
-├── INFRASTRUCTURE/
-│   ├── Data/
-│   │   ├── AppDbContext.cs
-│   │   ├── Configurations/
-│   │   ├── Migrations/
-│   │   └── SeedData/
-│   ├── Logging/
-│   └── Repositories/
-│       ├── ProdutoRepository.cs
-├── Migrations/
-├── appsettings.json
-└── Program.cs
-
-
-
-
-
-
-
-
-
-
-
-
 

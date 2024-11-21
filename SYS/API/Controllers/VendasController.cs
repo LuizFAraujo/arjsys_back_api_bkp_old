@@ -6,14 +6,9 @@ namespace SYS.API.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class VendasController : ControllerBase
+public class VendasController(IVendaService vendaService) : ControllerBase
 {
-    private readonly IVendaService _vendaService;
-
-    public VendasController(IVendaService vendaService)
-    {
-        _vendaService = vendaService;
-    }
+    private readonly IVendaService _vendaService = vendaService;
 
     [HttpGet]
     public IActionResult Get()
