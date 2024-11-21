@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SYS.INFRASTRUCTURE.Data;
 
@@ -10,9 +11,11 @@ using SYS.INFRASTRUCTURE.Data;
 namespace SYS.INFRASTRUCTURE.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241121042125_AddNewEntities")]
+    partial class AddNewEntities
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.11");
@@ -42,6 +45,65 @@ namespace SYS.INFRASTRUCTURE.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Almoxarifados");
+                });
+
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Almoxarifado.MateriaPrima", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MateriasPrimas");
+                });
+
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Almoxarifado.MovimentacaoEstoque", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataMovimentacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("MateriaPrimaId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantidade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("TipoMovimentacao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MateriaPrimaId");
+
+                    b.ToTable("MovimentacoesEstoque");
                 });
 
             modelBuilder.Entity("SYS.DOMAIN.Entities.Compras.Compra", b =>
@@ -136,6 +198,30 @@ namespace SYS.INFRASTRUCTURE.Data.Migrations
                     b.ToTable("Pessoas");
                 });
 
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Pessoas.Setor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Setores");
+                });
+
             modelBuilder.Entity("SYS.DOMAIN.Entities.Producao.OrdemProducao", b =>
                 {
                     b.Property<int>("Id")
@@ -204,6 +290,30 @@ namespace SYS.INFRASTRUCTURE.Data.Migrations
                     b.ToTable("Producoes");
                 });
 
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Produtos.EstruturaProduto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EstruturasProdutos");
+                });
+
             modelBuilder.Entity("SYS.DOMAIN.Entities.Produtos.Produto", b =>
                 {
                     b.Property<int>("Id")
@@ -227,13 +337,69 @@ namespace SYS.INFRASTRUCTURE.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("EstruturaProdutoId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("MateriaPrima")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("EstruturaProdutoId");
+
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Produtos.TipoProduto", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TiposProdutos");
+                });
+
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Shared.AuditInfo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("AlteradoPor")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("CriadoPor")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("DataCriacao")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Audits");
                 });
 
             modelBuilder.Entity("SYS.DOMAIN.Entities.Vendas.ItemVenda", b =>
@@ -296,6 +462,17 @@ namespace SYS.INFRASTRUCTURE.Data.Migrations
                     b.ToTable("Vendas");
                 });
 
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Almoxarifado.MovimentacaoEstoque", b =>
+                {
+                    b.HasOne("SYS.DOMAIN.Entities.Almoxarifado.MateriaPrima", "MateriaPrima")
+                        .WithMany()
+                        .HasForeignKey("MateriaPrimaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MateriaPrima");
+                });
+
             modelBuilder.Entity("SYS.DOMAIN.Entities.Compras.ItemCompra", b =>
                 {
                     b.HasOne("SYS.DOMAIN.Entities.Compras.Compra", null)
@@ -314,6 +491,13 @@ namespace SYS.INFRASTRUCTURE.Data.Migrations
                     b.Navigation("Producao");
                 });
 
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Produtos.Produto", b =>
+                {
+                    b.HasOne("SYS.DOMAIN.Entities.Produtos.EstruturaProduto", null)
+                        .WithMany("Produtos")
+                        .HasForeignKey("EstruturaProdutoId");
+                });
+
             modelBuilder.Entity("SYS.DOMAIN.Entities.Vendas.ItemVenda", b =>
                 {
                     b.HasOne("SYS.DOMAIN.Entities.Vendas.Venda", null)
@@ -324,6 +508,11 @@ namespace SYS.INFRASTRUCTURE.Data.Migrations
             modelBuilder.Entity("SYS.DOMAIN.Entities.Compras.Compra", b =>
                 {
                     b.Navigation("Itens");
+                });
+
+            modelBuilder.Entity("SYS.DOMAIN.Entities.Produtos.EstruturaProduto", b =>
+                {
+                    b.Navigation("Produtos");
                 });
 
             modelBuilder.Entity("SYS.DOMAIN.Entities.Vendas.Venda", b =>

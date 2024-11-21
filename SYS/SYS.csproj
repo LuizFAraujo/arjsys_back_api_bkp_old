@@ -22,6 +22,7 @@
     <Folder Include="APPLICATION\Mappers\" />
     <Folder Include="DOMAIN\Enums\" />
     <Folder Include="DOMAIN\Exceptions\" />
+    <Folder Include="DOMAIN\Specifications\" />
     <Folder Include="INFRASTRUCTURE\Data\Configurations\" />
     <Folder Include="INFRASTRUCTURE\Logging\" />
   </ItemGroup>
