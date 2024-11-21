@@ -17,12 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="API\Middlewares\" />
     <Folder Include="APPLICATION\DTOs\" />
     <Folder Include="APPLICATION\Mappers\" />
     <Folder Include="DOMAIN\Enums\" />
     <Folder Include="DOMAIN\Exceptions\" />
     <Folder Include="INFRASTRUCTURE\Data\Configurations\" />
-    <Folder Include="INFRASTRUCTURE\Data\Migrations\" />
     <Folder Include="INFRASTRUCTURE\Logging\" />
   </ItemGroup>
 

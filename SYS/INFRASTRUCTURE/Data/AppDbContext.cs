@@ -8,12 +8,8 @@ using SYS.DOMAIN.Entities.Vendas;
 
 namespace SYS.INFRASTRUCTURE.Data;
 
-public class AppDbContext : DbContext
+public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
-
-
     public DbSet<Almoxarifado> Almoxarifados { get; set; }
     public DbSet<Compra> Compras { get; set; }
     public DbSet<Pessoa> Pessoas { get; set; }
@@ -25,5 +21,12 @@ public class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         optionsBuilder.UseSqlite("Data Source=arjsys.db");
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        // Aplica as configurações de migração da pasta correta
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
 }

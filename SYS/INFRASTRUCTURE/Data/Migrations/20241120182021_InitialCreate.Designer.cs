@@ -8,7 +8,7 @@ using SYS.INFRASTRUCTURE.Data;
 
 #nullable disable
 
-namespace SYS.Migrations
+namespace SYS.INFRASTRUCTURE.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20241120182021_InitialCreate")]
