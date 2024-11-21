@@ -4,23 +4,19 @@ using SYS.INFRASTRUCTURE.Data;
 
 namespace SYS.INFRASTRUCTURE.Repositories;
 
-public class ProdutoRepository : IProdutoRepository
+public class ProdutoRepository(AppDbContext context) : IProdutoRepository
 {
-    private readonly AppDbContext _context;
-
-    public ProdutoRepository(AppDbContext context)
-    {
-        _context = context;
-    }
+    private readonly AppDbContext _context = context;
 
     public IEnumerable<Produto> GetAll()
     {
-        return _context.Produtos.ToList();
+        //return _context.Produtos.ToList();
+        return [.. _context.Produtos];
     }
 
     public Produto GetById(int id)
     {
-        return _context.Produtos.Find(id);
+        return _context.Produtos.Find(id) ?? throw new KeyNotFoundException("Produto não encontrado.");
     }
 
     public void Add(Produto produto)

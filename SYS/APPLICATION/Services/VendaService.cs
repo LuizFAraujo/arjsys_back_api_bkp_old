@@ -4,14 +4,9 @@ using SYS.DOMAIN.Interfaces;
 
 namespace SYS.APPLICATION.Services;
 
-public class VendaService : IVendaService
+public class VendaService(IVendaRepository vendaRepository) : IVendaService
 {
-    private readonly IVendaRepository _vendaRepository;
-
-    public VendaService(IVendaRepository vendaRepository)
-    {
-        _vendaRepository = vendaRepository;
-    }
+    private readonly IVendaRepository _vendaRepository = vendaRepository;
 
     public IEnumerable<Venda> GetAll()
     {
@@ -20,7 +15,15 @@ public class VendaService : IVendaService
 
     public Venda GetById(int id)
     {
-        return _vendaRepository.GetById(id);
+        try
+        {
+            return _vendaRepository.GetById(id);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            // Aqui você pode adicionar um log ou outra ação necessária
+            throw new Exception("Venda não encontrada", ex);
+        }
     }
 
     public void Add(Venda venda)

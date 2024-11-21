@@ -4,14 +4,9 @@ using SYS.DOMAIN.Interfaces;
 
 namespace SYS.APPLICATION.Services;
 
-public class ProdutoService : IProdutoService
+public class ProdutoService(IProdutoRepository produtoRepository) : IProdutoService
 {
-    private readonly IProdutoRepository _produtoRepository;
-
-    public ProdutoService(IProdutoRepository produtoRepository)
-    {
-        _produtoRepository = produtoRepository;
-    }
+    private readonly IProdutoRepository _produtoRepository = produtoRepository;
 
     public IEnumerable<Produto> GetAll()
     {
@@ -20,7 +15,15 @@ public class ProdutoService : IProdutoService
 
     public Produto GetById(int id)
     {
-        return _produtoRepository.GetById(id);
+        try
+        {
+            return _produtoRepository.GetById(id);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            // Aqui você pode adicionar um log ou outra ação necessária
+            throw new Exception("Produto não encontrado", ex);
+        }
     }
 
     public void Add(Produto produto)

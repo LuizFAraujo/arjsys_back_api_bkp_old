@@ -1,27 +1,22 @@
 ﻿using SYS.DOMAIN.Entities.Vendas;
 using SYS.DOMAIN.Interfaces;
-using Microsoft.EntityFrameworkCore;
 using SYS.INFRASTRUCTURE.Data;
 
 namespace SYS.INFRASTRUCTURE.Repositories;
 
-public class VendaRepository : IVendaRepository
+public class VendaRepository(AppDbContext context) : IVendaRepository
 {
-    private readonly AppDbContext _context;
-
-    public VendaRepository(AppDbContext context)
-    {
-        _context = context;
-    }
+    private readonly AppDbContext _context = context;
 
     public IEnumerable<Venda> GetAll()
     {
-        return _context.Vendas.ToList();
+        // return _context.Vendas.ToList();
+        return [.. _context.Vendas];
     }
 
     public Venda GetById(int id)
     {
-        return _context.Vendas.Find(id);
+        return _context.Vendas.Find(id) ?? throw new KeyNotFoundException("Venda não encontrada.");
     }
 
     public void Add(Venda venda)
