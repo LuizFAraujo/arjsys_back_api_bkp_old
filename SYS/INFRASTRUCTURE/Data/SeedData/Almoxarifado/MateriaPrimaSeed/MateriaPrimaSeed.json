@@ -1,0 +1,102 @@
+﻿[
+  {
+    "Nome": "Plástico Reciclado",
+    "Ativo": true,
+    "DataCriacao": "2024-01-01T00:00:00Z"
+  },
+  {
+    "Nome": "Madeira de Carvalho",
+    "Ativo": true,
+    "DataCriacao": "2024-01-02T00:00:00Z"
+  },
+  {
+    "Nome": "Vidro Temperado",
+    "Ativo": true,
+    "DataCriacao": "2024-01-03T00:00:00Z"
+  },
+  {
+    "Nome": "Fibras Naturais",
+    "Ativo": false,
+    "DataCriacao": "2024-01-04T00:00:00Z"
+  },
+  {
+    "Nome": "Espuma de Alta Densidade",
+    "Ativo": true,
+    "DataCriacao": "2024-01-05T00:00:00Z"
+  },
+  {
+    "Nome": "Couro Sintético",
+    "Ativo": true,
+    "DataCriacao": "2024-01-06T00:00:00Z"
+  },
+  {
+    "Nome": "Madeira de Eucalipto",
+    "Ativo": true,
+    "DataCriacao": "2024-01-07T00:00:00Z"
+  },
+  {
+    "Nome": "Aço Inoxidável",
+    "Ativo": true,
+    "DataCriacao": "2024-01-08T00:00:00Z"
+  },
+  {
+    "Nome": "Molas Ensacadas",
+    "Ativo": false,
+    "DataCriacao": "2024-01-09T00:00:00Z"
+  },
+  {
+    "Nome": "MDF",
+    "Ativo": true,
+    "DataCriacao": "2024-01-10T00:00:00Z"
+  },
+  {
+    "Nome": "Poliéster de Alta Resistência",
+    "Ativo": true,
+    "DataCriacao": "2024-01-11T00:00:00Z"
+  },
+  {
+    "Nome": "Aço Pintado",
+    "Ativo": false,
+    "DataCriacao": "2024-01-12T00:00:00Z"
+  },
+  {
+    "Nome": "Couro Natural",
+    "Ativo": true,
+    "DataCriacao": "2024-01-13T00:00:00Z"
+  },
+  {
+    "Nome": "Madeira de Pinus",
+    "Ativo": true,
+    "DataCriacao": "2024-01-14T00:00:00Z"
+  },
+  {
+    "Nome": "Compensado de Madeira",
+    "Ativo": true,
+    "DataCriacao": "2024-01-15T00:00:00Z"
+  },
+  {
+    "Nome": "Alumínio e Vidro",
+    "Ativo": true,
+    "DataCriacao": "2024-01-16T00:00:00Z"
+  },
+  {
+    "Nome": "Madeira de Freijo",
+    "Ativo": false,
+    "DataCriacao": "2024-01-17T00:00:00Z"
+  },
+  {
+    "Nome": "Lã de Ovelha",
+    "Ativo": true,
+    "DataCriacao": "2024-01-18T00:00:00Z"
+  },
+  {
+    "Nome": "Tecido Acetinada",
+    "Ativo": true,
+    "DataCriacao": "2024-01-19T00:00:00Z"
+  },
+  {
+    "Nome": "MDF Branco",
+    "Ativo": true,
+    "DataCriacao": "2024-01-20T00:00:00Z"
+  }
+]

@@ -24,6 +24,7 @@
     <Folder Include="DOMAIN\Exceptions\" />
     <Folder Include="DOMAIN\Specifications\" />
     <Folder Include="INFRASTRUCTURE\Data\Configurations\" />
+    <Folder Include="INFRASTRUCTURE\Data\SeedData\Almoxarifado\MateriaPrimaSeed\" />
     <Folder Include="INFRASTRUCTURE\Logging\" />
   </ItemGroup>
 

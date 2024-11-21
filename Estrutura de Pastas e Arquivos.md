@@ -16,6 +16,7 @@ SYS/
 ├── API/
 │   ├── Controllers/
 │   │   ├── ComprasController.cs
+│   │   ├── MateriasPrimasController.cs
 │   │   ├── ProdutosController.cs
 │   │   └── VendasController.cs
 │   └── Middlewares/
@@ -24,29 +25,37 @@ SYS/
 │   ├── DTOs/
 │   ├── Interfaces/
 │   │   ├── ICompraService.cs
+│   │   ├── IMateriaPrimaService.cs
 │   │   ├── IProdutoService.cs
 │   │   └── IVendaService.cs
 │   ├── Mappers/
 │   └── Services/
 │       ├── CompraService.cs
+│       ├── MateriaPrimaService.cs
 │       ├── ProdutoService.cs
 │       └── VendaService.cs
 │
 ├── DOMAIN/
 │   ├── Entities/
 │   │   ├── Almoxarifado/
-│   │   │   └── Almoxarifado.cs
+│   │   │   ├── Almoxarifado.cs
+│   │   │   ├── MateriaPrima.cs
+│   │   │   └── MovimentacaoEstoque.cs
 │   │   ├── Compras/
 │   │   │   ├── Compra.cs
 │   │   │   └── ItemCompra.cs
 │   │   ├── Pessoas/
-│   │   │   └── Pessoa.cs
+│   │   │   ├── Pessoa.cs
+│   │   │   └── Setor.cs
 │   │   ├── Producao/
 │   │   │   ├── OrdemProducao.cs
 │   │   │   └── Producao.cs
 │   │   ├── Produtos/
-│   │   │   └── Produto.cs
+│   │   │   ├── EstruturaProduto.cs
+│   │   │   ├── Produto.cs
+│   │   │   └── TipoProduto.cs
 │   │   ├── Shared/
+│   │   │   ├── AuditInfo.cs
 │   │   │   └── BaseEntity.cs
 │   │   └── Vendas/
 │   │       ├── ItemVenda.cs
@@ -55,6 +64,7 @@ SYS/
 │   ├── Exceptions/
 │   ├── Interfaces/
 │   │   ├── ICompraRepository.cs
+│   │   ├── IMateriaPrimaRepository.cs
 │   │   ├── IProdutoRepository.cs
 │   │   └── IVendaRepository.cs
 │   └── Specifications/
@@ -63,7 +73,13 @@ SYS/
 │   ├── Data/
 │   │   ├── Configurations/
 │   │   ├── Migrations/
+│   │   │   └── # Atualiza Conforme Alterações #
 │   │   ├── SeedData/
+│   │   │   ├── Almoxarifado/
+│   │   │   │	├── MateriaPrimaSeed/
+│   │   │   │   │   ├── MateriaPrimaSeed.cs
+│   │   │   │   │ 	└── MateriaPrimaSeed.json
+│   │   │   │   └AlmoxarifadoSeed.cs
 │   │   │   ├── Compras/
 │   │   │   │   ├── ComprasSeed.cs
 │   │   │   │   └── ComprasSeed.json
