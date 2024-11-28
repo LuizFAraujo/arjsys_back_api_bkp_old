@@ -11,6 +11,7 @@ O backend do ArjSYS tem como objetivo gerenciar a lógica de negócios e fornece
 - **C# e .NET**: Linguagem e framework para o desenvolvimento do backend.
 - **Entity Framework**: ORM para facilitar a interação com o banco de dados.
 - **PostgreSQL**: Banco de dados relacional para o armazenamento de dados.
+- **SQlite**: Banco de dados usado inicialmente.
 
 ### 📝 Observações
 
