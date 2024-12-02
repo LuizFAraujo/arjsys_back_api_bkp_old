@@ -1,15 +1,12 @@
-# Estrutura de Pastas e Arquivos
+# Estrutura de Pastas e Arquivosssss
 
-Este documento descreve a estrutura das pastas e arquivos do projeto ArjSys.
-Ele fornece uma visão geral de como o código está organizado em camadas e módulos, explicando a função de cada pasta.
-
-
+``` plaintext
 ArjSys/
 ├── # Dependências #
-│	└── Pacotes
-│		├── Microsoft.EntityFrameworkCore.Sqlite
-│		├── Microsoft.EntityFrameworkCore.Tools
-│		└── Swashbuckle.AspNetCore
+│   └── Pacotes
+│       ├── Microsoft.EntityFrameworkCore.Sqlite
+│       ├── Microsoft.EntityFrameworkCore.Tools
+│       └── Swashbuckle.AspNetCore
 │
 ├── Controllers/
 │   ├── EstoquesController.cs
@@ -66,7 +63,7 @@ ArjSys/
 │
 ├── Models/
 │   ├── Shared/
-│	│	└── BaseEntity.cs
+│   │   └── BaseEntity.cs
 │   ├── Estoque.cs
 │   ├── ItemVenda.cs
 │   ├── Producao.cs
@@ -92,3 +89,4 @@ ArjSys/
 ├── appsettings.json
 ├── ArjSys.http
 └── Program.cs
+```
